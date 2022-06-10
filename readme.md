@@ -2,6 +2,20 @@
 
 Provides a TypeScript library replicating elements of Blender, and matching export scripts.
 
+## Dependencies
+
+- Blender 3.2
+
+This must be available on the PATH (e.g. `blender --help` prints help text when executed in a Bash terminal).
+
+### Installing on common Linux distributions
+
+```bash
+wget https://download.blender.org/release/Blender3.2/blender-3.2.0-linux-x64.tar.xz
+tar -xf blender-3.2.0-linux-x64.tar.xz
+sudo ln -s $(pwd)/blender-3.2.0-linux-x64/blender /usr/bin/
+```
+
 ## Installation
 
 Run the following in a Bash shell at the root of your project:
@@ -215,5 +229,12 @@ blenderCombineMatrices(a, b, b);
 // "b" now contains the result of applying "b" to "a".  "a" is unmodified.
 ```
 
-TODO document features
-TODO document dependencies
+## Input
+
+This plugin converts each file in the `DRECK_BLENDER_INPUT_BLEND_PATHS` Make variable.
+
+## Output
+
+This plugin writes an equivalent TypeScript file for each input file.  For example, if `DRECK_BLENDER_INPUT_BLEND_PATHS` contained `./example/file-path.blend`, `./plugins/data-uri/generated/example-file-path.ts` would be written to disk.
+
+Their paths are listed in the `DRECK_BLENDER_OUTPUT_TYPE_SCRIPT_PATHS` Make variable, space separated.

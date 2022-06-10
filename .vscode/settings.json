@@ -15,10 +15,7 @@
   "files.eol": "\n",
   "files.exclude": {
     "**/.git": true,
-    ".DS_Store": true,
-    "node_modules": true,
-    "index.js": true,
-    ".nyc_output": true
+    ".DS_Store": true
   },
   "typescript.tsdk": "./node_modules/typescript.lib"
 }

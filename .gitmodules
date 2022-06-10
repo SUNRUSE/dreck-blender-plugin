@@ -1,3 +1,9 @@
 [submodule "plugins/type-script"]
 	path = plugins/type-script
 	url = https://github.com/SUNRUSE/dreck-type-script-plugin
+[submodule "bats-core"]
+	path = bats-core
+	url = https://github.com/bats-core/bats-core
+[submodule "plugins/dreck"]
+	path = plugins/dreck
+	url = https://github.com/SUNRUSE/dreck
